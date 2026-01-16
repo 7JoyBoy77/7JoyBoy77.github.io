@@ -4,23 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>UTF编码的知识 | JoyBoy的网站</title>
+  <title>Day114 | JoyBoy的网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="因为我用微信无法发送md格式也就是富文本格式的内容，所以去看看怎样可以发送，然后发现Unicode中有加粗的字符码点。0x0041是大写A 0x1D400是加粗大写A 这样就又发现了为何如此编码的问题，Unicode&#96;&#96;0-0x10FFFF来映射这些字符。 想起UTF-8,然后就去看了UTF-8如何对Unicode编码: 12例如，“汉字”对应的数字是0x6c49和0x5b57，而编码的程序数据是">
+  <meta name="description" content="Faker说过每次进入游戏时，在游戏界面他也很兴奋，保持热情 保罗加索尔也说过科比让他明白了在最高赛场赢球的各种能力 今日目标：早晨：   开始学习《深入理解计算机系统原理》第一部分的第三章    面试朗信医疗    《二十世纪中国史纲》文革内容的继续学习    面试完都中午了，眯了一觉还没看    下午   洗毯子    通过开源小项目学习C&#x2F;C++的开发和语法，主要在语法层面。至少看">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UTF编码的知识">
-<meta property="og:url" content="https://7joyboy77.github.io/2025/12/18/UTF/index.html">
+<meta property="og:title" content="Day114">
+<meta property="og:url" content="https://7joyboy77.github.io/2026/01/14/Day114/index.html">
 <meta property="og:site_name" content="JoyBoy的网站">
-<meta property="og:description" content="因为我用微信无法发送md格式也就是富文本格式的内容，所以去看看怎样可以发送，然后发现Unicode中有加粗的字符码点。0x0041是大写A 0x1D400是加粗大写A 这样就又发现了为何如此编码的问题，Unicode&#96;&#96;0-0x10FFFF来映射这些字符。 想起UTF-8,然后就去看了UTF-8如何对Unicode编码: 12例如，“汉字”对应的数字是0x6c49和0x5b57，而编码的程序数据是">
+<meta property="og:description" content="Faker说过每次进入游戏时，在游戏界面他也很兴奋，保持热情 保罗加索尔也说过科比让他明白了在最高赛场赢球的各种能力 今日目标：早晨：   开始学习《深入理解计算机系统原理》第一部分的第三章    面试朗信医疗    《二十世纪中国史纲》文革内容的继续学习    面试完都中午了，眯了一觉还没看    下午   洗毯子    通过开源小项目学习C&#x2F;C++的开发和语法，主要在语法层面。至少看">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://7joyboy77.github.io/images/image.png">
-<meta property="og:image" content="https://7joyboy77.github.io/images/image2.png">
-<meta property="article:published_time" content="2025-12-17T21:35:58.000Z">
-<meta property="article:modified_time" content="2025-12-17T21:48:46.742Z">
+<meta property="article:published_time" content="2026-01-13T20:25:52.000Z">
+<meta property="article:modified_time" content="2026-01-14T21:25:38.900Z">
 <meta property="article:author" content="JoyBoy">
-<meta property="article:tag" content="CS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://7joyboy77.github.io/images/image.png">
   
     <link rel="alternate" href="/atom.xml" title="JoyBoy的网站" type="application/atom+xml">
   
@@ -77,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-UTF" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Day114" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2025/12/18/UTF/" class="article-date">
-  <time class="dt-published" datetime="2025-12-17T21:35:58.000Z" itemprop="datePublished">2025/12/18</time>
+    <a href="/2026/01/14/Day114/" class="article-date">
+  <time class="dt-published" datetime="2026-01-13T20:25:52.000Z" itemprop="datePublished">2026/01/14</time>
 </a>
     
   </div>
@@ -91,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      UTF编码的知识
+      Day114
     </h1>
   
 
@@ -99,51 +95,57 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="因为我用微信无法发送md格式也就是富文本格式的内容，所以去看看怎样可以发送，然后发现Unicode中有加粗的字符码点。"><a href="#因为我用微信无法发送md格式也就是富文本格式的内容，所以去看看怎样可以发送，然后发现Unicode中有加粗的字符码点。" class="headerlink" title="因为我用微信无法发送md格式也就是富文本格式的内容，所以去看看怎样可以发送，然后发现Unicode中有加粗的字符码点。"></a>因为我用微信无法发送md格式也就是富文本格式的内容，所以去看看怎样可以发送，然后发现Unicode中有加粗的字符码点。</h3><p><code>0x0041</code>是大写<code>A</code></p>
-<p><code>0x1D400</code>是加粗大写<code>A</code></p>
-<p>这样就又发现了为何如此编码的问题，<code>Unicode``0-0x10FFFF</code>来映射这些字符。</p>
-<p>想起<code>UTF-8</code>,然后就去看了<code>UTF-8</code>如何对<code>Unicode</code>编码:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如，“汉字”对应的数字是0x6c49和0x5b57，而编码的程序数据是：</span><br><span class="line">BYTE data_utf8[] = &#123;0xE6, 0xB1, 0x89, 0xE5, 0xAD, 0x97&#125;; // UTF-8编码</span><br></pre></td></tr></table></figure>
-
+        <p><strong>Faker说过每次进入游戏时，在游戏界面他也很兴奋，保持热情</strong></p>
+<p><strong>保罗加索尔也说过科比让他明白了在最高赛场赢球的各种能力</strong></p>
+<h2 id="今日目标："><a href="#今日目标：" class="headerlink" title="今日目标："></a>今日目标：</h2><h3 id="早晨："><a href="#早晨：" class="headerlink" title="早晨："></a>早晨：</h3><ul>
+<li><p><input checked="" disabled="" type="checkbox"> 
+开始学习《深入理解计算机系统原理》第一部分的第三章</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+面试朗信医疗</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+《二十世纪中国史纲》文革内容的继续学习 </p>
+<p>  面试完都中午了，眯了一觉还没看</p>
+</li>
+</ul>
 <hr>
-<p><strong>然后不懂为何这样编就去问AI，查资料。</strong></p>
-<p><code>UTF</code>是<code>UCS Transformation Format</code>的缩写，可以翻译成统一码字符集转换格式，即怎样将统一码定义的数字转换成程序数据是为了让机器懂编码。</p>
-<p><strong>UTF-8编码规则</strong>:</p>
-<p><img src="/../images/image.png" alt="alt text"></p>
-<hr>
-<p><strong>为何要如此呢？设计哲学？</strong></p>
-<p><img src="/../images/image2.png" alt="alt text"></p>
-<p>看到开头bit位的设计又问到了一次计算机的编码原理，如同当时学的Huffman编码。</p>
-<p><strong>这次带着问题的学习，真的是如同创造一般，没有异化。</strong></p>
+<h3 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h3><ul>
+<li><p><input checked="" disabled="" type="checkbox"> 
+洗毯子</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+通过开源小项目学习C&#x2F;C++的开发和语法，主要在语法层面。至少看1-2个项目</p>
+<p>  任务先保留，这两天回家，面试事务繁忙，自己学习失败。</p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://7joyboy77.github.io/2025/12/18/UTF/" data-id="cuidEVqx8mTd2KUUzro0wV1fI" data-title="UTF编码的知识" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://7joyboy77.github.io/2026/01/14/Day114/" data-id="cuid2mWoIDWfLh_K7ojwjw7io" data-title="Day114" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CS/" rel="tag">CS</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2026/01/11/History/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2026/01/15/Day115/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          关于对一切历史都是当代史的思考
+          Day115
         
       </div>
     </a>
   
   
-    <a href="/2025/12/18/study/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2026/01/13/Day113/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">学习QT中感受到的异化</div>
+      <div class="article-nav-title">1月13日的路</div>
     </a>
   
 </nav>
